@@ -10,7 +10,7 @@ public class TaskManipulator implements Runnable, CustomThreadManipulator{
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
-               //do nothing
+                break;
             }
         }
     }
