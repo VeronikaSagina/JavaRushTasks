@@ -1,0 +1,52 @@
+package com.javarush.task.task21.task2113;
+
+public class Horse {
+String name;
+double speed;
+double distance;
+
+    public void move(){
+        speed *= Math.random() + 0.5;
+        if (speed < 0.5){
+            speed = 0.5;
+        }
+        distance += speed;
+    }
+    public void print(){
+        StringBuilder power = new StringBuilder();
+        for (int i = 0; i < Math.floor(distance); i++) {
+            power.append(".");
+        }
+        System.out.println(power + name + '(' + speed + ')');
+    }
+
+    public Horse(String name, double speed, double distance) {
+        this.name = name;
+        this.speed = speed;
+        this.distance = distance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+}

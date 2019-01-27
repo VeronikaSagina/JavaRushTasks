@@ -1,0 +1,15 @@
+package com.javarush.task.task27.task2712.kitchen;
+
+
+import com.javarush.task.task27.task2712.ConsoleHelper;
+
+import java.util.Observable;
+import java.util.Observer;
+
+public class Waiter implements Observer {
+
+    @Override
+    public void update(Observable o/*cook*/, Object arg/*order*/) {
+        ConsoleHelper.writeMessage(String.format("%s was cooked by %s", arg, o));
+    }
+}
